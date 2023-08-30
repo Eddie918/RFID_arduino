@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RFID Access Log</title>
+  <link rel="stylesheet" href=".//styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>RFID Access Log</h1>
+  <button id="unlockButton">Desbloquear</button>
+  <canvas id="myChart"></canvas>
+  <ul id="log"></ul>
+
+  <script>
+    // Conectar a Socket.io
+const socket = io.connect('http://localhost:3000');
+
+// Inicializar el gráfico con Chart.js
+const data = {
+  labels: [],  // Aquí irán las etiquetas (por ejemplo, las horas)
+  datasets: [{
+    label: 'Accesos',
+    data: [],  // Aquí irán los datos (por ejemplo, el número de accesos)
+    borderColor: 'rgba(75, 192, 192, 1)',
+    borderWidth: 1,
+    fill: false
+  }]
+};
+
+const myChart = new Chart(document.getElementById('myChart'), {
+  type: 'line',  // o 'bar', 'pie', etc.
+  data: data,
+  options: {
+    scales: {
+      x: {
+        type: 'time',
+        time: {
+          unit: 'minute'
+        }
+      }
+    }
+  }
+});
+
+// Escuchar el evento 'newRFID'
+socket.on('newRFID', (data) => {
+  // Actualizar el gráfico
+  const now = new Date();
+  myChart.data.labels.push(now);
+  myChart.data.datasets[0].data.push(1);  // Suponiendo que cada evento representa un acceso
+  myChart.update();
+
+  // Añadir el registro a la lista
+  const log = document.getElementById('log');
+  const entry = document.createElement('li');
+  entry.className = data.userDetails.isOutsideOfNormalHours ? 'outside-normal-hours' : '';
+  entry.innerHTML = `Nuevo acceso: ${data.rfid}, Usuario: ${data.userDetails.username}`;
+  log.appendChild(entry);
+});
+
+// Escuchar el botón de desbloqueo
+document.getElementById('unlockButton').addEventListener('click', () => {
+  socket.emit('unlock');
+});
+
+  </script>
+</body>
+</html>
