@@ -1,0 +1,26 @@
+<div class="crear-arrendatario-bg">
+  <div class="container">
+    <div class="form-container">
+      <h1 class="display-4">Crear Cuenta Arrendatario</h1>
+      <form (ngSubmit)="crearArrendatario()">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="Nombre" [(ngModel)]="arrendatario.nombre" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="Apellido" [(ngModel)]="arrendatario.apellido" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" name="Teléfono" [(ngModel)]="arrendatario.telefono" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <input type="text" id="correo" name="Correo" [(ngModel)]="arrendatario.correo" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Crear</button>
+      </form>
+    </div>
+  </div>
+</div>

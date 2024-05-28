@@ -1,0 +1,72 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #eff2f1;
+}
+
+.hero {
+  padding: 60px 0;
+  background-color: #3b5d50;
+}
+.py-5{
+  background-color: #3b5d50;
+}
+
+.py-5 .display-4 {
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero .display-4 {
+  font-weight: 700;
+}
+
+.hero .btn-primary {
+  background-color: #3b5d50;
+  border-color: #3b5d50;
+}
+
+.hero .btn-outline-light {
+  color: #ffffff;
+  border-color: #3b5d50;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 225px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-text {
+  color: #333;
+}
+
+.text-body-secondary {
+  color: #6c757d;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #3b5d50;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #3b5d50;
+  color: #fff;
+}
+
+.gallery-time {
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}

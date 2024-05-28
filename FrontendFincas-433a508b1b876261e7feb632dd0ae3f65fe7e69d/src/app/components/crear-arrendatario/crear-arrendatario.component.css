@@ -1,0 +1,63 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.crear-arrendatario-bg {
+  background-color: #1d2d35; /* Color de fondo específico */
+  color: #fff; /* Color del texto */
+  min-height: 100vh; /* Asegura que cubra toda la altura de la página */
+  padding: 60px 0; /* Espaciado superior e inferior */
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 60px auto;
+  color: #333; /* Color del texto dentro del formulario */
+}
+
+.form-container .display-4 {
+  font-weight: 700;
+  color: #3b5d50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #3b5d50;
+  border-color: #3b5d50;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #2d473f;
+  border-color: #2d473f;
+}
+
+.btn-block {
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let propiedad of propiedades">
+    <div class="picsum-img-wrapper">
+      <img [src]="imagenPorDefecto" alt="Imagen de la propiedad">
+    </div>
+    <div class="carousel-caption">
+      <h3>Finca: {{ propiedad.id_propiedad }}</h3>
+      <p>Precio: {{ propiedad.precio }}</p>
+      <p>Ubicación: {{ propiedad.ubicacion }}</p>
+      <p>Disponibilidad: {{ propiedad.disponibilidad }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

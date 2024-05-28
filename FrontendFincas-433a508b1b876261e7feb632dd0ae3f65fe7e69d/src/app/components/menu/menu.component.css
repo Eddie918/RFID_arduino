@@ -1,0 +1,107 @@
+/* Estilos generales y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Fuente general para el cuerpo del documento */
+    background-color: #eff2f1; /* Background color for body */
+}
+
+/* Estilo del navbar contenedor del menú */
+.navbar {
+    font-family: 'Inter', sans-serif;
+    background-color: #3b5d50; /* Custom background color */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    padding: 20px 0; /* Padding top and bottom */
+    border-bottom: 3px solid #d2b48c; /* Stylish bottom border */
+}
+
+/* Estilo de la marca del navbar */
+.navbar-brand {
+    color: #fff;
+    font-size: 32px; /* Increased font size */
+    font-weight: 600; /* Bold font weight */
+    margin-right: 15px; /* Right margin for brand */
+}
+
+/* Estilos para los links del menú */
+.nav-link {
+    color: #ffffff !important; /* Override color */
+    margin: 0 15px; /* Margin for links */
+    padding: 0.5rem 1rem; /* Padding for the links */
+    opacity: 0.5; /* Make the nav links slightly transparent */
+    position: relative; /* Position relative for the hover effect */
+    background-color: transparent;
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.nav-link:hover, .nav-link:focus {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Estilos para los dropdowns del menú */
+.dropdown-menu {
+    background-color: #3b5d50;
+    border: none; /* No border for dropdown */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Modern shadow for dropdown */
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #2d473f;
+    color: #d2b48c; /* Hover color for dropdown items */
+}
+
+/* Estilo para los ítems de la lista de arrendadores */
+.listar-arrendadores {
+    background-color: #f8f9fa; /* Clear background for the list */
+    padding: 2rem; /* Spacing around the list */
+    margin: 2rem auto; /* Centered margin for the list container */
+    border-radius: 0.5rem; /* Rounded borders for the list container */
+    max-width: 600px; /* Set a max-width for the list container */
+}
+
+.listar-arrendadores h2 {
+    color: #333; /* Dark color for the title */
+    margin-bottom: 1rem; /* Spacing under the title */
+}
+
+.listar-arrendadores ul {
+    list-style: none;
+}
+
+.listar-arrendadores li {
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+.listar-arrendadores li:hover {
+    background-color: #e9ecef;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .nav-link {
+        margin: 0 10px; /* Less space between links on mobile */
+        padding: 0.5rem; /* Adjust padding for mobile */
+    }
+
+    .custom-navbar-nav {
+        margin-right: 0; /* Adjust the right margin on mobile */
+    }
+}

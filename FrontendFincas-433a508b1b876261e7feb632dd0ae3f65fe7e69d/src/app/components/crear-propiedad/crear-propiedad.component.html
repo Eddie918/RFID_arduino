@@ -1,0 +1,25 @@
+<div class="publicar-propiedad-bg">
+<div class="form-container">
+  <h1 class="display-4">Publicar Propiedad</h1>
+  <form (ngSubmit)="crearPropiedad()">
+    <div class="form-group">
+      <label for="calificacion">Calificación</label>
+      <input type="number" id="calificacion" name="Calificacion" [(ngModel)]="propiedad.calificacion" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" name="Precio" [(ngModel)]="propiedad.precio" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="ubicacion">Ubicación</label>
+      <input type="text" id="ubicacion" name="Ubicacion" [(ngModel)]="propiedad.ubicacion" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="disponibilidad">Disponibilidad</label>
+      <input type="number" id="disponibilidad" name="Disponibilidad" [(ngModel)]="propiedad.disponibilidad" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Publicar</button>
+  </form>
+</div>
+</div>
+

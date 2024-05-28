@@ -1,0 +1,14 @@
+<div class="listar-arrendatarios-bg">
+  <div class="container">
+    <div class="carousel-container">
+      <h1 class="display-4">Ver Arrendatarios</h1>
+      <div *ngFor="let arrendatario of arrendatarios" class="arrendatario-card">
+        <h3>{{ arrendatario.nombre }} {{ arrendatario.apellido }}</h3>
+        <p>ID: {{ arrendatario.id_arrendatario }}</p>
+        <p>Correo: {{ arrendatario.correo }}</p>
+        <p>Teléfono: {{ arrendatario.telefono }}</p>
+        <button (click)="eliminarArrendatario(arrendatario.id_arrendatario || 0)" class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
